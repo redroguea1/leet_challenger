@@ -9,7 +9,6 @@ var twoSum = function(numbers, target) {
     const output = []
     let i = 0
     while(output.length<2){
-        
         //start by findiing the difference between target and numbers[i]
         if (numbers.includes(target - numbers[i])){
             console.log("version 1 " + output)
@@ -52,4 +51,4 @@ var twoSum = function(numbers, target) {
 
 let numbers = [1,3,3,4];
 let target = 6;
-twoSum(numbers, target)
+console.log(twoSum(numbers, target));
