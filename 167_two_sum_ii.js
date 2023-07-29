@@ -4,6 +4,7 @@
 // numbers = [1,3,3,4], target = 6
 // numbers = [0, 0, 1, 2] target = 0
 
+//FAILURE 19/23 test cases passed. 
 
 var twoSum = function(numbers, target) {
     const output = []

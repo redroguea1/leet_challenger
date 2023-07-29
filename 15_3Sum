@@ -1,0 +1,27 @@
+var threeSum = function(nums) {
+    let i=0;
+    let j = i+1;
+    let k = i+2;
+    let waiting = 0
+    let output =[]
+    //goal is to have the 3sum = 0
+    
+    //edge case for when nums.length= 0
+    
+    while(i< nums.length){
+        if(nums[i]+nums[j] != 0) {
+            let diff = nums[i]+nums[j]
+            if(nums.includes(0-diff))
+            //calculate distance from 0 to this value and check see if its in the array or not. 
+            if(diff+nums[k]== 0) {
+                output.push([nums[i], nums[j], nums[k]]);
+                i= k+1
+                j= i+1
+                k= i+2
+            }
+        }
+        //else if those values = 0, a different condition. 
+    }
+    
+    
+};
