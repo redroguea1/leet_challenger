@@ -1,0 +1,33 @@
+
+//first code version Aug 2nd. 2023
+var lengthOfLongestSubstring = function(s) {
+    let output = []
+    let t = s.split('')
+    
+    let l = 0
+    let r = 1
+    while(l < t.length){
+        //add to output to create substring
+        //if both pointing at the same character
+        if(t[l] == t[r]){
+            l = r+1
+        }
+        //if characters are different do something else
+        if(t[l] != t[r]) {
+            if(output[] == t[l]) //slide the window because we don't want to re-add here
+            output.push(t[l])
+            
+            //conditional
+            output.push(t[r])
+            //check on push parameters
+            l++
+            r++
+        }
+        
+    }
+    
+    
+    
+    
+    return output.length
+};

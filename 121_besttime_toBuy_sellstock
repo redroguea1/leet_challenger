@@ -1,0 +1,30 @@
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    let b = 0 // buying
+    let d = 1 //selling day
+    let maxProfit = 0 
+    while (b < prices.length){
+        // we want to compare the values of buying and selling to calculate profit
+        // Need an exit condition to keep 
+        let buy = prices[b] //grabbing first element
+        let sell = prices[d] //selling
+        let newProfit = sell - buy 
+        if (newProfit < 0){
+            //continue after we've reassessed our values 
+            d++
+            continue // move to the next value
+        }
+        else if (newProfit > maxProfit) {
+            maxProfit = newProfit
+            d++ // move to next item in the remain array. 
+            //if (d>=prices.length )
+            //increment to the next value
+        }
+        b++
+        d = b+1 //resets the function after we have moved through the loop. 
+    }
+    return maxProfit
+};
