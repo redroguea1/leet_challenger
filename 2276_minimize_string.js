@@ -16,6 +16,15 @@ var minimizedStringLength = function (s) {
     //else increment i
     //Combine set elements into a string save to answer
     //return answer.length 
+    let answer = "";
+    let combo = new Set()
+    for (let i= 0; i<s.length; i++){
+        if(!combo.has(s[i])){
+            combo.add(s[i])
+        }
+    }
+    combo.forEach(c => answer+= c)
+    return answer.length
 
 
     //version 2 but doesn't work since  the way this iterable gets built. 
