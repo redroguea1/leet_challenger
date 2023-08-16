@@ -14,6 +14,25 @@ var minimizedStringLength = function(s) {
         //remove the character again
         //repeat the operation. 
     
+        //version 2 but doesn't work since  the way this iterable gets built. 
+        let lenny = c.count()
+        if (lenny == 1) {
+            console.log("count is 1")
+            console.log(s)
+            continue
+        }
+        else{
+            for (const item of c){
+                //take item and remove that character from 
+                console.log("COUNT is not 1")
+                s = s.replace(item, '')
+                console.log("new s: " + s)
+                //console.log("count = "+ count)
+                console.log("item = "+ item)
+            }
+        }
+
+        //version 1
         let answer = 0;
         for(let i = 0; i<s.length; i++){
             let count = 0
