@@ -74,3 +74,69 @@ string printMsg1 = $"View English ouput:\n \tc:\\Exercise\\{projectName}\\data.t
 string printMsg2 = $"{russianMessage}:\n \tc:\\Exercise\\{projectName}\\ru-RU\\data.txt";
 Console.WriteLine(printMsg1);
 Console.WriteLine(printMsg2); 
+
+int sum = 7+5;
+int difference = 7-5;
+int product = 7*5;
+//int quotient = 7/5;
+
+Console.WriteLine("sum: " + sum);
+Console.WriteLine("Difference: " + difference);
+Console.WriteLine("Product: " + product);
+//Console.WriteLine("Quotient: " + quotient);
+
+decimal decimalQuotient = 7.0m/5;
+Console.WriteLine($"Decimal quotient: {decimalQuotient}");
+
+//casting
+int first = 7;
+int second = 5;
+decimal quotient = (decimal)first / (decimal)second;
+Console.WriteLine(quotient);
+//casting to cast you add the type you want casted to before the variable 
+
+Console.WriteLine($"Modulus of 200/5 : {200 % 5}");
+Console.WriteLine($"Modulus of 7/5 : {7 % 5}");
+//when modululus is 0 that means the dividend is divisible the divisor
+
+int value1 = 3 + 4 * 5;
+int value2 = (3+4) * 5;
+Console.WriteLine(value1);
+Console.WriteLine(value2);
+
+//incrementing/decrmenting
+int value = 1;
+
+value = value + 1;
+Console.WriteLine("First increment: " + value);
+
+value += 1;
+Console.WriteLine("Second increment: " + value);
+
+value++;
+Console.WriteLine("Third increment: " + value);
+
+value = value - 1;
+Console.WriteLine("First decrment: " + value);
+
+value -= 1;
+Console.WriteLine("Second decrment: " + value);
+
+value--;
+Console.WriteLine("Third decrement: " + value);
+
+
+//positiion matters with "++" and "--" 
+int value = 1;
+//intial increment 
+value++;
+Console.WriteLine("First: " + value);
+//print then increment
+Console.WriteLine("Second: " + value++);
+//print post increment 
+Console.WriteLine("Third: " + value);
+//incremenet then print 
+Console.WriteLine("Fourth: " + (++value));
+
+
+//
