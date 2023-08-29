@@ -14,7 +14,8 @@ var twoSum = function(numbers, target) {\
     while(left<right){
         if (numbers[left] + numbers[right] < target) left++;
         else if (numbers[left] + numbers[right] > target) right--;
-        return [left+1, right+1];
+        //need to be a conditional statement to prevent premature returning
+        else return [left+1, right+1]; //(numbers[left] + numbers[right] == target
     }
 
     //JULY 27TH
