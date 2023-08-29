@@ -6,7 +6,18 @@
 
 //FAILURE 19/23 test cases passed. 
 
-var twoSum = function(numbers, target) {
+var twoSum = function(numbers, target) {\
+    //VERSION 2 8/26
+    //failure getting a weird output
+    left = 0; 
+    right = numbers.length-1;
+    while(left<right){
+        if (numbers[left] + numbers[right] < target) left++;
+        else if (numbers[left] + numbers[right] > target) right--;
+        return [left+1, right+1];
+    }
+
+    //JULY 27TH
     const output = []
     let i = 0
     while(output.length<2){
