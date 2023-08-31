@@ -1,0 +1,20 @@
+var stringMatching = function(words) {
+
+    //version 1
+    let output = new Set(); //might still work as an array. 
+    for (let i = 0; i < words.length; i++) {
+        let sub = words[i];
+        //split string in order to check other values in our array
+        let left = words.slice(0,i);
+        let right = words.slice(i, words.length);
+        console.log(left);
+        console.log(right);
+        if(right.includes(sub)){
+            output.add(sub)
+        }
+        else if (left.includes(sub)){
+            output.add(sub)
+        }
+    }
+    return output;
+};
