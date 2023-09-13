@@ -11,6 +11,8 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
+
+ /*version 1 broken up into multiple steps when it somes to adding the values and printing them out. */
     let num1 = "";
     let num2 = "";
     let output = new ListNode();
@@ -20,8 +22,8 @@ var addTwoNumbers = function(l1, l2) {
     let p2 = l2;
     while(p1 || p2){ //o(n)
         //need conditionals for values when 
-        num1 = num1 + p1.val;
-        num2 = num2 + p2.val;
+        num1 = p1.val + num1;
+        num2 = p2.val + num2;
         p1 = p1.next;
         p2 = p2.next;
     }
