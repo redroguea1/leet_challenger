@@ -12,10 +12,10 @@ var minOperations = function(logs) {
       let i = 0;
 
       while (i<logs.length){
-        if (logs[i] == "./"); //nothing happens
+        if (logs[i] == "./"); //nothing happens, useless line of code
         else if (logs[i] == "../" && moves != 0) moves--;
           //need a rule here for when we have a file folder. 
-        else if(!logs[i].contains("."))) moves++
+        else if(!logs[i].includes(".")) moves++
         i++
       }
       return moves
