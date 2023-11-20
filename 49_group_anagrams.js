@@ -2,6 +2,12 @@
  * @param {string[]} strs
  * @return {string[][]}
  */
+
+
+/* YUTA hint
+Try Sorting the array before hand and using that as a key instead. 
+
+*/
 var groupAnagrams = function(strs) {
     //one off case
    if (strs.length <= 1) return [strs]
@@ -19,7 +25,7 @@ var groupAnagrams = function(strs) {
             LOGIC:
             console.log("b".charCodeAt()-"a".charCodeAt()) PRINTS 1 
             */
-            
+            //used a value = char.charCodeAt()-"a".charCodeAt();
             count[char.charCodeAt()-'a'.charCodeAt()] += 1
         }
         if(!output.has(count)){
